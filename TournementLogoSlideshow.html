@@ -1,0 +1,103 @@
+<style>
+    .slide_show {
+        margin: auto;
+        margin-top: 8px;
+        width: 350px;
+        height: 200px;
+    }
+    .slide_left {
+        margin:0 auto;
+        position: relative;
+        width: 300px;
+    }
+    .left_arrow {
+        position: absolute;
+        left: 2px;
+        top: 80px;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'ErasDemiITCRegular';
+    }
+    .right_arrow {
+        position: absolute;
+        right: 2px;
+        top: 80px;
+    }
+</style>
+<br>
+<div class="resp-row">
+    <div class="column half" contenteditable="false">
+        <div class="inner-column" contenteditable="true">
+            <div class="inner-column mnbn_border_solid" contenteditable="true"><br>
+                <div id="e|180|" class="ce-widget ue" style="width:400px; " title="Upcoming Events (180 days out)">
+                    <div class="widget-loading"><img src="images/loading3.gif"></div>
+                    <div class="placeholder-type">Upcoming Events</div>
+                    <div class="placeholder-title">Upcoming Events (180 days out)</div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="column half" contenteditable="false">
+        <div class="inner-column" contenteditable="true">
+            <div class="slide_left mnbn_border_solid">
+                <span style="font-size: 20px;">MN B.A.S.S. Nation Tournaments</span><!--Start Advertisement Slideshow-->
+                <div class="slide_show">
+                    <a href="#" class="left_arrow" id="slideshow_left"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/leftArrow_1112762499.png" alt="left"></a>
+                    <a href="#" class="right_arrow" id="slideshow_right"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/rightArrow_1616771274.png" alt="right"></a>
+                    <div id="tourney-logo-slideshow">
+                        <div>
+                            <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=276842"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/toclogo_310062712_1713337671.jpg" alt="Bass Nation Tournament of Champions">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=279282"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/TeamTrail_Tournament_Logo_ToyotaBB300x189_705765694.jpg&#10;&#10;" alt="Team Trail Tournament Link"></a>
+                        </div>
+                        <div>
+                            <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=279281"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BassNation_OpenSeries_Logo_383196637_1964252985.jpg" alt="Bass Nation Open Series">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    jQuery("#tourney-logo-slideshow > div:gt(0)").hide();
+
+                    // fade out current slide (first), fade in next slide and move first slide to end
+                    var nextSlide = function () {
+                        jQuery("#tourney-logo-slideshow > div:first").hide().next().show().end().appendTo("#tourney-logo-slideshow");
+                    }
+                    var nextSlideTimer = setInterval(nextSlide, 5000);
+
+                    // fade out current slide (first) and move last slide to top and fade in
+                    jQuery("#slideshow_left").click(function (e) {
+                        clearInterval(nextSlideTimer);
+
+                        jQuery("#tourney-logo-slideshow > div:first").hide();
+                        jQuery("#tourney-logo-slideshow > div:last").show().prependTo("#tourney-logo-slideshow");
+// Prevent the click event from scrolling to the top of the page
+                        e.preventDefault()
+                        nextSlideTimer = setInterval(nextSlide, 5000)
+                        setTimeout(nextSlideTimer, 5000)
+                    });
+
+                    jQuery("#slideshow_right").click(function (e) {
+                        clearInterval(nextSlideTimer);
+
+                        jQuery("#tourney-logo-slideshow > div:first").hide().next().show().end().appendTo("#tourney-logo-slideshow");
+// Prevent the click event from scrolling to the top of the page
+                        e.preventDefault()
+                        nextSlideTimer = setInterval(nextSlide, 5000)
+                        setTimeout(nextSlideTimer, 5000)
+                    });
+
+                </script>
+            </div>
+            <!--End Slideshow--></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<br>
+<hr>
