@@ -1,6 +1,6 @@
 <style>
     .slide_show {
-        margin: auto;
+        margin:0 auto;
         margin-top: 8px;
         width: 350px;
         height: 200px;
@@ -9,6 +9,7 @@
         margin:0 auto;
         position: relative;
         width: 300px;
+        z-index: 3;
     }
     .left_arrow {
         position: absolute;
@@ -49,12 +50,16 @@
                     <a href="#" class="left_arrow" id="slideshow_left"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/leftArrow_1112762499.png" alt="left"></a>
                     <a href="#" class="right_arrow" id="slideshow_right"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/rightArrow_1616771274.png" alt="right"></a>
                     <div id="tourney-logo-slideshow">
+                        <div style="margin:0 auto;">
+                            <a href="content.aspx?page_id=22&amp;club_id=18905&amp;module_id=277218"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BassmasterHighSchool_Logo209x189_2023115545.png" alt="Bass Nation High School Series">
+                            </a>
+                        </div>
                         <div>
                             <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=276842"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/toclogo_310062712_1713337671.jpg" alt="Bass Nation Tournament of Champions">
                             </a>
                         </div>
                         <div>
-                            <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=279282"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/TeamTrail_Tournament_Logo_ToyotaBB300x189_705765694.jpg&#10;&#10;" alt="Team Trail Tournament Link"></a>
+                            <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=279282"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/TeamTrail_Tournament_Logo_ToyotaBB300x189_705765694.jpg" alt="Team Trail Tournament Link"></a>
                         </div>
                         <div>
                             <a href="/content.aspx?page_id=22&amp;club_id=18905&amp;module_id=279281"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BassNation_OpenSeries_Logo_383196637_1964252985.jpg" alt="Bass Nation Open Series">
@@ -69,7 +74,7 @@
                     var nextSlide = function () {
                         jQuery("#tourney-logo-slideshow > div:first").hide().next().show().end().appendTo("#tourney-logo-slideshow");
                     }
-                    var nextSlideTimer = setInterval(nextSlide, 5000);
+                    var nextSlideTimer = setInterval(nextSlide, 5050);
 
                     // fade out current slide (first) and move last slide to top and fade in
                     jQuery("#slideshow_left").click(function (e) {
@@ -79,7 +84,7 @@
                         jQuery("#tourney-logo-slideshow > div:last").show().prependTo("#tourney-logo-slideshow");
 // Prevent the click event from scrolling to the top of the page
                         e.preventDefault()
-                        nextSlideTimer = setInterval(nextSlide, 5000)
+                        nextSlideTimer = setInterval(nextSlide, 5050)
                         setTimeout(nextSlideTimer, 5000)
                     });
 
@@ -89,7 +94,7 @@
                         jQuery("#tourney-logo-slideshow > div:first").hide().next().show().end().appendTo("#tourney-logo-slideshow");
 // Prevent the click event from scrolling to the top of the page
                         e.preventDefault()
-                        nextSlideTimer = setInterval(nextSlide, 5000)
+                        nextSlideTimer = setInterval(nextSlide, 5050)
                         setTimeout(nextSlideTimer, 5000)
                     });
 
