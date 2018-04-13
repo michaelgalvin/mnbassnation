@@ -1,0 +1,89 @@
+<style>
+    .header_with_ad {
+        position: relative;
+        width: 1100px;
+        height: 140px;
+        margin:0 auto;
+    }
+    .header_logo_left {
+        position: absolute;
+        top: 3px;
+        left: 0px;
+    }
+    .header_right_top {
+        position: absolute;
+        top: 3px;
+        left: 280px;
+    }
+    .header_right_bottom {
+        position: absolute;
+        top: 55px;
+        left: 280px;
+    }
+    .header_left_arrow {
+        position: absolute;
+        left: 0px;
+        top: 15px;
+    }
+    .header_right_arrow {
+        position: absolute;
+        right: 0px;
+        top: 15px;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'ErasDemiITCRegular';
+    }
+</style>
+<!--Start Advertisement Slideshow-->
+<div class="header_with_ad">
+    <div class="header_logo_left"><a href="/content.aspx?page_id=0&amp;club_id=18905&amp;module_id=279282"></a><a href="/content.aspx?page_id=0&amp;club_id=18905&amp;module_id=279282"><img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/logobassnation_993767197.png " alt="Minnesota Bass Nation Home Page Link"></a>
+    </div>
+    <div class="header_right_top">
+        <a href="https://www.bassmaster.com"></a><a href="https://www.bassmaster.com"><img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BassMaster730x45_871372968.png" alt="Bass Home Page Link"></a>
+    </div>
+    <div class="header_right_bottom">
+        <a href="#" class="header_left_arrow" id="ad_slideshow_left"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/leftArrow_1112762499.png" alt="left button"></a>
+        <a href="#" class="header_right_arrow" id="ad_slideshow_right"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/rightArrow_1616771274.png" alt="right button"></a>
+        <div id="ad_slideshow">
+            <div>
+                <a href="https://www.classicbass.com/2018-classic-bass-champions-tour-sponsored-by-skeeter-boats-yamaha-outboards"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/ChampionsTourBanner_728x90_v2_1054543037.jpg&#10;" alt="Classic Bass Champions Tour">
+                </a>
+            </div>
+            <div>
+                <a href="#"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BannerAdSample-blue730x75_2002932704.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery("#ad_slideshow > div:gt(0)").hide();
+
+    // Change current slide (first), show next slide and move first slide to end
+    var nextSlide = function () {
+        jQuery("#ad_slideshow > div:first").hide().next().show().end().appendTo("#ad_slideshow");
+    }
+    var nextSlideTimer = setInterval(nextSlide, 5000);
+
+    // Change the current slide (first) and move last slide to top
+    jQuery("#ad_slideshow_left").click(function () {
+        clearInterval(nextSlideTimer);
+
+        jQuery("#ad_slideshow > div:first").hide();
+        jQuery("#ad_slideshow > div:last").show().prependTo("#ad_slideshow");
+
+        nextSlideTimer = setInterval(nextSlide, 5000)
+        setTimeout(nextSlideTimer, 5000)
+    });
+
+    jQuery("#ad_slideshow_right").click(function () {
+        clearInterval(nextSlideTimer);
+
+        jQuery("#ad_slideshow > div:first").hide().next().show().end().appendTo("#ad_slideshow");
+
+        nextSlideTimer = setInterval(nextSlide, 5000)
+        setTimeout(nextSlideTimer, 5000)
+    });
+</script>
+<!--End Slideshow-->
