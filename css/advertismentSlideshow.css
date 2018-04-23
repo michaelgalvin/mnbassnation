@@ -1,0 +1,73 @@
+######This section is currently in Development.  Disable it in "Common Content"######
+ <style>
+ .header_with_ad {
+     float: left;
+     margin-top: 8px;
+     width: 1000px;
+ }
+.slide_left {
+    float: left;
+    position: relative;
+    width: 643px;
+}
+.left_arrow {
+    position: absolute;
+    left: 2px;
+    top: 140px;
+    z-index: 85;
+}
+a {
+    text-decoration: none;
+    font-family: 'ErasDemiITCRegular';
+}
+.right_arrow {
+    z-index: 85;
+    position: absolute;
+    right: 2px;
+    top: 140px;
+}
+.slide_txt {
+    position: absolute;
+    background-image: url(../images/slidetxtbg.png);
+    height: 84px;
+    background-position: center top;
+    background-repeat: repeat-x;
+    width: 643px;
+    left: 0;
+    top: 195px;
+    z-index: 85;
+}
+.slide_txt &gt; h2 {
+                    color: #FFFFFF;
+                    font-size: 24px;
+                    font-weight: normal;
+                    margin-top: 14px;
+                    padding-left: 43px;
+                }
+.slide_txt &gt; p {
+                    color: #FFFFFF;
+                    font-size: 12px;
+                    font-weight: normal;
+                    padding-left: 43px;
+                }
+.slide_btn {
+    position: absolute;
+    background-image: url(../images/yarrow.png);
+    width: 273px;
+    height: 41px;
+    left: -7px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 266px;
+    z-index: 85;
+}
+.slide_btn &gt; p {
+                    color: #000000;
+                    float: left;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-left: 46px;
+                    margin-top: 13px;
+                    text-transform: uppercase;
+                }
+</style>

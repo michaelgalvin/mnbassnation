@@ -24,11 +24,13 @@
         position: absolute;
         left: 0px;
         top: 15px;
+        opacity: 0.4;
     }
     .header_right_arrow {
         position: absolute;
         right: 0px;
         top: 15px;
+        opacity: 0.4;
     }
     a {
         text-decoration: none;
@@ -47,24 +49,33 @@
         <a href="#" class="header_right_arrow" id="ad_slideshow_right"><img src="https://s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/rightArrow_1616771274.png" alt="right button"></a>
         <div id="ad_slideshow">
             <div>
-                <a href="https://www.classicbass.com/2018-classic-bass-champions-tour-sponsored-by-skeeter-boats-yamaha-outboards"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/ChampionsTourBanner_728x90_v2_1054543037.jpg&#10;" alt="Classic Bass Champions Tour">
+                <a href="https://www.classicbass.com/2018-classic-bass-champions-tour-sponsored-by-skeeter-boats-yamaha-outboards" target="_blank"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/ChampionsTourBanner_728x90_v2_1054543037.jpg&#10;" alt="Classic Bass Champions Tour">
                 </a>
             </div>
             <div>
-                <a href="#"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/BannerAdSample-blue730x75_2002932704.png" alt="">
+                <a href="https://www.visitgrandrapids.com/" target="_blank"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/grandrapids_1685256592.png" alt="Visit Grand Rapids Link">
+                </a>
+            </div>
+            <div>
+                <a href="http://www.allterraintackle.com/" target="_blank"> <img src="//s3.amazonaws.com/ClubExpressClubFiles/18905/graphics/allterraintackle-1_858981524.png" alt="All Terrain Tackle Link">
                 </a>
             </div>
         </div>
     </div>
 </div>
 <script>
+    var ads = document.querySelector('.ad_slideshow');
+    for (var i = ads.children.length; i >= 0; i--) {
+        ads.appendChild(ads.children[Math.random() * i | 0]);
+    }
+
     jQuery("#ad_slideshow > div:gt(0)").hide();
 
     // Change current slide (first), show next slide and move first slide to end
     var nextSlide = function () {
         jQuery("#ad_slideshow > div:first").hide().next().show().end().appendTo("#ad_slideshow");
     }
-    var nextSlideTimer = setInterval(nextSlide, 5000);
+    var nextSlideTimer = setInterval(nextSlide, 7000);
 
     // Change the current slide (first) and move last slide to top
     jQuery("#ad_slideshow_left").click(function () {
@@ -73,8 +84,8 @@
         jQuery("#ad_slideshow > div:first").hide();
         jQuery("#ad_slideshow > div:last").show().prependTo("#ad_slideshow");
 
-        nextSlideTimer = setInterval(nextSlide, 5000)
-        setTimeout(nextSlideTimer, 5000)
+        nextSlideTimer = setInterval(nextSlide, 7000)
+        setTimeout(nextSlideTimer, 7000)
     });
 
     jQuery("#ad_slideshow_right").click(function () {
@@ -82,8 +93,8 @@
 
         jQuery("#ad_slideshow > div:first").hide().next().show().end().appendTo("#ad_slideshow");
 
-        nextSlideTimer = setInterval(nextSlide, 5000)
-        setTimeout(nextSlideTimer, 5000)
+        nextSlideTimer = setInterval(nextSlide, 7000)
+        setTimeout(nextSlideTimer, 7000)
     });
 </script>
 <!--End Slideshow-->
